@@ -1,17 +1,7 @@
-我重新调整了一版，更适合作为 GitHub README：
 
-* 增加适量 emoji，方便阅读和突出结构；
-* 保持科研仓库风格，不像宣传文案；
-* 控制在 200 行以内；
-* 可以直接复制到 `README.md`；
-* 不加入无法保证的信息（例如具体文件名、训练脚本参数等）。
-
-````markdown
 # 🚦 SDRSB: Spectral-Community Dual-Stream Routing with Soft Boundaries for Traffic Prediction
 
-Official implementation of:
 
-**SDRSB: Spectral-Community Dual-Stream Routing with Soft Boundaries for Traffic Prediction**
 
 SDRSB is a spectral-community dual-stream framework for traffic prediction.  
 The proposed framework aims to capture complex urban traffic dynamics by jointly modeling:
