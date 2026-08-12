@@ -1,0 +1,4 @@
+seed: 42
+data: {dataset: METR-LA, data_path: data/METR-LA/METR-LA.npz, adjacency_path: data/METR-LA/adj.npy, community_path: data/METR-LA/community.npy, feature_index: 0, history: 12, horizon: 1, slots_per_day: 288, days_per_week: 7, split: [0.7, 0.2, 0.1]}
+model: {communities: 8, top_k: 3, d_model: 96, d_gcn: 32, inception_layers: 3, dropout: 0.1, k_high: 1, k_low: 3, beta_warmup_steps: 200}
+training: {epochs: 300, batch_size: 16, learning_rate: 0.0001, weight_decay: 0.0001, patience: 5, grad_clip: 1.0, lambda_spec: 0.02, lambda_sep: 0.05, lambda_orth: 0.01, num_workers: 0, output_dir: outputs/METR-LA_paper}

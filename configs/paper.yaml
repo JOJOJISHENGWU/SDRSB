@@ -1,0 +1,39 @@
+seed: 42
+data:
+  dataset: PEMS08
+  data_path: data/PEMS08/PEMS08.npz
+  adjacency_path: data/PEMS08/adj.npy
+  community_path: data/PEMS08/community.npy
+  feature_index: 0
+  history: 12
+  horizon: 1
+  slots_per_day: 288
+  days_per_week: 7
+  split: [0.7, 0.2, 0.1]
+model:
+  communities: 4
+  top_k: 3
+  d_model: 96
+  d_gcn: 32
+  inception_kernels: [1, 3, 5]
+  inception_layers: 3
+  dropout: 0.1
+  k_high: 1
+  k_low: 3
+  routing_hidden: 16
+  scb_init: -3.0
+  beta_warmup_steps: 200
+  use_calendar_refinement: false
+  use_persistence_residual: false
+training:
+  epochs: 300
+  batch_size: 16
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  patience: 5
+  grad_clip: 1.0
+  lambda_spec: 0.02
+  lambda_sep: 0.05
+  lambda_orth: 0.01
+  num_workers: 0
+  output_dir: outputs/PEMS08_paper
